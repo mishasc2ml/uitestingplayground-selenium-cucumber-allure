@@ -1,6 +1,7 @@
 package org.example.app.page;
 
 import org.example.app.util.Scripts;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +17,7 @@ public class ScrollBarsPage extends BasePage {
 
     public ScrollBarsPage findHiddenButton() {
         Scripts.moveToElement(driver, hiddenButton);
+        logger.info("moved to hidden element");
         return this;
     }
 
@@ -23,7 +25,7 @@ public class ScrollBarsPage extends BasePage {
         try {
             wait.waitUntilClickableAndClick(hiddenButton);
             return true;
-        } catch (Exception e) {
+        } catch (TimeoutException e) {
             return false;
         }
     }

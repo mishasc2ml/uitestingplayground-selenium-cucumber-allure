@@ -17,12 +17,14 @@ public class DynamicTablePage extends BasePage {
     }
 
     public String getChromeCpuValueFromTable() {
+        logger.info("got table CPU value");
         return wait.waitUntilVisible(chromeCpuElement).getText();
     }
 
     public String getChromeCpuValueFromYellowLabel() {
         wait.waitUntilVisible(yellowLabelCpuElement);
         int yellowLabelTextLength = yellowLabelCpuElement.getText().length();
+        logger.info("got yellow label CPU value");
         return yellowLabelCpuElement.getText().substring(yellowLabelTextLength - 4);
     }
 }

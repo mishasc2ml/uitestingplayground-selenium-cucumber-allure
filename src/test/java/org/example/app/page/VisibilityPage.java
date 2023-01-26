@@ -37,6 +37,7 @@ public class VisibilityPage extends BasePage {
 
     public VisibilityPage hideButtonClick() {
         wait.waitUntilClickableAndClick(hideButton);
+        logger.info("hide button has been clicked");
         return this;
     }
 

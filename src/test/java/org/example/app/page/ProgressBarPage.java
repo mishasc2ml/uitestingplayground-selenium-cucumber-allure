@@ -24,6 +24,7 @@ public class ProgressBarPage extends BasePage {
 
     public ProgressBarPage startButtonClick() {
         wait.waitUntilClickableAndClick(startButton);
+        logger.info("start button has been clicked");
         return this;
     }
 
@@ -36,6 +37,7 @@ public class ProgressBarPage extends BasePage {
                 flag = false;
             }
         }
+        logger.info("stop button has been clicked");
         return this;
     }
 
@@ -43,6 +45,7 @@ public class ProgressBarPage extends BasePage {
         wait.waitUntilVisible(progressBarElement);
         int spaceIndex = resultElement.getText().indexOf(" ");
         int commaIndex = resultElement.getText().indexOf(",");
+        logger.info("got result value");
         return resultElement.getText().substring(spaceIndex + 1, commaIndex);
     }
 

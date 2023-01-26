@@ -18,11 +18,13 @@ public class TextInputPage extends BasePage {
 
     public TextInputPage inputNewButtonName() {
         wait.waitUntilVisible(nameInputField).sendKeys("New button name");
+        logger.info("new button name has been entered");
         return this;
     }
 
     public TextInputPage setNewNameButtonClick() {
         wait.waitUntilClickableAndClick(changingNameButton);
+        logger.info("changing name button has been clicked");
         return this;
     }
 

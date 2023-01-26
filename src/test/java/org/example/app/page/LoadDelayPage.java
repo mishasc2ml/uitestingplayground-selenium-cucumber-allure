@@ -1,5 +1,6 @@
 package org.example.app.page;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,11 +14,11 @@ public class LoadDelayPage extends BasePage {
         super(driver);
     }
 
-    public boolean isButtonAppearingAfterLoadDelayClicked() {
+    public boolean isButtonAppearingAfterLoadDelayAppeared() {
         try {
             wait.waitUntilClickableAndClick(buttonAppearingAfterDelay);
             return true;
-        } catch (Exception e) {
+        } catch (TimeoutException e) {
             return false;
         }
     }

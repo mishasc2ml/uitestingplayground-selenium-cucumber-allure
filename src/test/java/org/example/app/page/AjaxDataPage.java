@@ -1,5 +1,6 @@
 package org.example.app.page;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,7 @@ public class AjaxDataPage extends BasePage {
 
     public AjaxDataPage ajaxButtonClick() {
         wait.waitUntilClickableAndClick(ajaxButton);
+        logger.info("ajax button has been clicked");
         return this;
     }
 
@@ -28,7 +30,7 @@ public class AjaxDataPage extends BasePage {
         try {
             wait.waitUntilVisible(loadedDataElement);
             return true;
-        } catch (Exception e) {
+        } catch (TimeoutException e) {
             return false;
         }
     }

@@ -18,6 +18,7 @@ public class MouseOverPage extends BasePage {
 
     public MouseOverPage clickLinkTwoTimes() {
         actions.moveToElement(clickMeLink).click().click().perform();
+        logger.info("link double click has been performed");
         return this;
     }
 

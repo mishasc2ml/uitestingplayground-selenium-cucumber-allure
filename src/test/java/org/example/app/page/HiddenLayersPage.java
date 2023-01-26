@@ -1,5 +1,6 @@
 package org.example.app.page;
 
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +16,7 @@ public class HiddenLayersPage extends BasePage {
 
     public HiddenLayersPage greenButtonClick() {
         wait.waitUntilClickableAndClick(greenButton);
+        logger.info("green button has been clicked");
         return this;
     }
 
@@ -22,7 +24,7 @@ public class HiddenLayersPage extends BasePage {
         try {
             wait.waitUntilClickableAndClick(greenButton);
             return true;
-        } catch (Exception e) {
+        } catch (ElementClickInterceptedException e) {
             return false;
         }
     }

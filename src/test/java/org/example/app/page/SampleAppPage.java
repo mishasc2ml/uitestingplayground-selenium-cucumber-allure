@@ -31,6 +31,7 @@ public class SampleAppPage extends BasePage {
 
     public SampleAppPage submitButtonClick() {
         wait.waitUntilClickableAndClick(loginButton);
+        logger.info("login button has been clicked");
         return this;
     }
 
@@ -46,6 +47,7 @@ public class SampleAppPage extends BasePage {
 
     public SampleAppPage logout() {
         wait.waitUntilClickableAndClick(logoutButton);
+        logger.info("logout button has been clicked");
         return this;
     }
 

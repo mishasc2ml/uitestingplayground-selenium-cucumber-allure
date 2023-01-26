@@ -17,6 +17,6 @@ public class LoadDelaySteps extends BaseStep {
 
     @Then("user clicks button appearing after load delay")
     public void isButtonAppearingAfterLoadDelayClicked() {
-        Assert.assertTrue(loadDelayPage.isButtonAppearingAfterLoadDelayClicked());
+        Assert.assertTrue(loadDelayPage.isButtonAppearingAfterLoadDelayAppeared());
     }
 }

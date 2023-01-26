@@ -16,6 +16,7 @@ public class ClickPage extends BasePage {
 
     public ClickPage blueButtonClick() {
         actions.moveToElement(blueButton).click().perform();
+        logger.info("blue button has been clicked");
         return this;
     }
 

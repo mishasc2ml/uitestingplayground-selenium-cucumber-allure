@@ -1,5 +1,6 @@
 package org.example.app.page;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,13 +16,14 @@ public class DynamicIdPage extends BasePage {
 
     public DynamicIdPage buttonClick() {
         wait.waitUntilClickableAndClick(dynamicIdButton);
+        logger.info("dynamic id button has been clicked");
         return new DynamicIdPage(driver);
     }
 
     public boolean isButtonClicked() {
         try {
             wait.waitUntilClickableAndClick(dynamicIdButton);
-        } catch (Exception e) {
+        } catch (TimeoutException e) {
             return false;
         }
         return true;
