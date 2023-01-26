@@ -9,7 +9,6 @@ public class ClickPage extends BasePage {
     @FindBy(xpath = "//button[contains(@class,'btn-primary')]")
     private WebElement blueButton;
 
-
     public ClickPage(WebDriver driver) {
         super(driver);
     }

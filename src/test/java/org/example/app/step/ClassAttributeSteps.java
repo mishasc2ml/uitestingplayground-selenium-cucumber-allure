@@ -19,7 +19,6 @@ public class ClassAttributeSteps extends BaseStep {
     @When("user clicks blue button")
     public void blueButtonClick() {
         classAttributePage.blueButtonCLick();
-
     }
 
     @Then("alert containing text {string} appears")

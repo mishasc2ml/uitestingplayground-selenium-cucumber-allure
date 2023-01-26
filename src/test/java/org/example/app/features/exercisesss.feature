@@ -73,7 +73,6 @@ Feature: Completed exercises from http://uitestingplayground.com/
     When user clicks hide button
     Then other buttons should not be visible
 
-
   @Login
   @SampleApp
   Scenario: Sample app exercise - fill in and submit form
@@ -84,7 +83,7 @@ Feature: Completed exercises from http://uitestingplayground.com/
 
   @Logout
   @SampleApp
-    Scenario: Sample app exercise - logout after successful login
+  Scenario: Sample app exercise - logout after successful login
     Given sample app exercise page opened
     And user did login
     When user clicks logout button
