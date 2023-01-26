@@ -1,4 +1,4 @@
-Compeleted automation exercises at http://uitestingplayground.com/ using maven, selenium, cucumber, testng, log4j, allure, jenkins.
+Compeleted automation exercises at http://uitestingplayground.com/ using maven, selenium, cucumber, testng, log4j, allure, jenkins
 
 Run from command line:
 
